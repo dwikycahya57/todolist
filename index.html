@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplikasi To-Do List</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="profile">
+                <h2>Nama: Dwiky Cahya Kurniawan</h2>
+                <p>Jabatan: Manager</p>
+            </div>
+            <div class="time">
+                <p id="current-date"></p>
+            </div>
+        </header>
+        <main>
+            <section class="task-input">
+                <textarea id="task-text" placeholder="Tulis tugas di sini..."></textarea>
+                <div class="priority">
+                    <label for="priority">Prioritas:</label>
+                    <select id="priority">
+                        <option value="Low">Low</option>
+                        <option value="Medium">Medium</option>
+                        <option value="High">High</option>
+                    </select>
+                </div>
+                <button onclick="addTask()">Submit</button>
+            </section>
+
+            <section class="todo-list">
+                <h3>To-Do-List</h3>
+                <ul id="task-list"></ul>
+                <button class="delete-all" onclick="deleteAllTasks()">Hapus Semua</button>
+            </section>
+
+            <section class="done-list">
+                <h3>Done</h3>
+                <ul id="done-list"></ul>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
